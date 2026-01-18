@@ -20,6 +20,7 @@ public class UpdateUserTest {
 		.then()
 			.log().all()
 			.statusCode(200);
+		
 	}
 	
 }
