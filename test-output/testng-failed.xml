@@ -3,6 +3,11 @@
 <suite thread-count="3" parallel="methods" name="Failed suite [API Suite]">
   <test thread-count="3" parallel="methods" name="API Tests(failed)">
     <classes>
+      <class name="com.api.tests.GetUserTest">
+        <methods>
+          <include name="validateGetUser"/>
+        </methods>
+      </class> <!-- com.api.tests.GetUserTest -->
       <class name="com.api.tests.UpdateUserTest">
         <methods>
           <include name="validateUpdateUser"/>

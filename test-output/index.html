@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods, 1 failed,   2 passed</span>
+                    <span class="method-stats">3 methods, 2 failed,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -101,6 +101,11 @@
                       <a href="#" panel-name="suite-API_Suite" class="show-methods failed suite-API_Suite"> (show)</a> <!-- show-methods failed suite-API_Suite -->
                     </span>
                     <div class="method-list-content failed suite-API_Suite">
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-API_Suite" title="com.api.tests.GetUserTest" class="method navigator-link" hash-for-method="validateGetUser">validateGetUser</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                       <span>
                         <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-API_Suite" title="com.api.tests.UpdateUserTest" class="method navigator-link" hash-for-method="validateUpdateUser">validateUpdateUser</a> <!-- method navigator-link -->
@@ -120,11 +125,6 @@
                         <a href="#" panel-name="suite-API_Suite" title="com.api.tests.CreateUserTest" class="method navigator-link" hash-for-method="validateCreateUser">validateCreateUser</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-API_Suite" title="com.api.tests.GetUserTest" class="method navigator-link" hash-for-method="validateGetUser">validateGetUser</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
                     </div> <!-- method-list-content passed suite-API_Suite -->
                   </li>
                 </ul>
@@ -137,6 +137,41 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-API_Suite" class="panel API_Suite">
+          <div class="suite-API_Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.api.tests.GetUserTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="validateGetUser">
+                  </a> <!-- validateGetUser -->
+                  <span class="method-name">validateGetUser</span>
+                  <div class="stack-trace">java.lang.AssertionError: 1 expectation failed.
+Expected status code &lt;200&gt; but was &lt;404&gt;.
+
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+	at io.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:516)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+	at io.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:714)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:139)
+	at org.codehaus.groovy.vmplugin.v8.IndyInterface.fromCache(IndyInterface.java:344)
+	at io.restassured.internal.ResponseSpecificationImpl.statusCode(ResponseSpecificationImpl.groovy:147)
+	at io.restassured.internal.ValidatableResponseOptionsImpl.statusCode(ValidatableResponseOptionsImpl.java:89)
+	at com.api.tests.GetUserTest.validateGetUser(GetUserTest.java:21)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+... Removed 13 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-API_Suite-class-failed -->
           <div class="suite-API_Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
@@ -172,21 +207,6 @@ Expected status code &lt;200&gt; but was &lt;404&gt;.
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-API_Suite-class-failed -->
-          <div class="suite-API_Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.api.tests.GetUserTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="validateGetUser">
-                  </a> <!-- validateGetUser -->
-                  <span class="method-name">validateGetUser</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-API_Suite-class-passed -->
           <div class="suite-API_Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -258,22 +278,22 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'validateGetUser')
-data.setCell(0, 2, 'com.api.tests.GetUserTest')
-data.setCell(0, 3, 3466);
+data.setCell(0, 1, 'validateUpdateUser')
+data.setCell(0, 2, 'com.api.tests.UpdateUserTest')
+data.setCell(0, 3, 3395);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'validateUpdateUser')
-data.setCell(1, 2, 'com.api.tests.UpdateUserTest')
-data.setCell(1, 3, 2874);
+data.setCell(1, 1, 'validateCreateUser')
+data.setCell(1, 2, 'com.api.tests.CreateUserTest')
+data.setCell(1, 3, 3327);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'validateCreateUser')
-data.setCell(2, 2, 'com.api.tests.CreateUserTest')
-data.setCell(2, 3, 2689);
+data.setCell(2, 1, 'validateGetUser')
+data.setCell(2, 2, 'com.api.tests.GetUserTest')
+data.setCell(2, 3, 3325);
 window.suiteTableData['API_Suite']= { tableData: data, tableDiv: 'times-div-API_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 9 seconds</span>
+              <span class="suite-total-time">Total running time: 10 seconds</span>
               <div id="times-div-API_Suite">
               </div> <!-- times-div-API_Suite -->
             </div> <!-- times-div -->
@@ -299,11 +319,11 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.api.tests.UpdateUserTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.api.tests.GetUserTest</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">validateUpdateUser</span>
+                <span class="method-name">validateGetUser</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
@@ -315,9 +335,11 @@ return data;
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">com.api.tests.GetUserTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.api.tests.UpdateUserTest</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">validateGetUser</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">validateUpdateUser</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->

@@ -15,7 +15,7 @@ public class GetUserTest {
 								spec(RequestSpecFactory.request())
 								.log().all()
 							.when()
-								.get("/users/1").
+								.get("/user/1").
 							then()
 								.log().all()
 								.statusCode(200)
