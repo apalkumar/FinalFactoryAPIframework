@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="API Suite" parallel="methods" thread-count="3">
+
+	<test name="API Tests">
+		<classes>
+			<class name="com.api.tests.GetUserTest" />
+			<class name="com.api.tests.CreateUserTest" />
+			<class name="com.api.tests.UpdateUserTest" />
+		</classes>
+	</test>
+</suite>
