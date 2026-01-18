@@ -15,6 +15,8 @@ public class RequestSpecFactory {
 	}
 }
 
+
+
 // It shows how to set the other parameters in it.
 //public class BaseSpecs {
 
